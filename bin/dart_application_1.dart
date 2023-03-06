@@ -22,11 +22,31 @@ void main(List<String> arguments) {
 
   List<String> maleNames=['name1','name2'];
   List<String> femalNames=['fname1','fname2'];
-  List<String> allNames=[...maleNames,...femalNames];
+  List<String> allNames=[...maleNames,...femalNames,'test'];
   allNames.add("name3");
   allNames.addAll(["name4","name5"]);
+  allNames.insert(2,'jehad');
 
-  print(allNames);
+// for(int i=0; i<allNames.length;i++)
+// {
+// print(allNames[i]);
+// }
+  
+// print('====');
+
+// maleNames.forEach((element) {print(element);});
+
+// print('====');
+// for(String name in maleNames) {
+//   print(name);
+// }
+
+String users="/";
+List<String> usersList=['saeed','hesham', 'raed'];
+usersList.forEach((element) {users+=element; if(element!=usersList.last){ users+='/';} });
+usersList.map((element) {return element.toUpperCase(); });
+print(usersList);
+
 
 
 }
