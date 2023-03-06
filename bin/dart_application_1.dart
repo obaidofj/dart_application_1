@@ -20,13 +20,21 @@ void main(List<String> arguments) {
   dyVr=9;
   var age2= 9;
 
-  List<String> maleNames=['name1','name2'];
+  List<String> maleNames=['name1','name2','name1'];
   List<String> femalNames=['fname1','fname2'];
   List<String> allNames=[...maleNames,...femalNames];
   allNames.add("name3");
   allNames.addAll(["name4","name5"]);
 
-  print(allNames);
+  //print(allNames);
 
+
+  allNames.forEach((e) { print(e); });
+
+  List<int> namesLeng = allNames.map ( (e) { return e.length; } ).toList();
+  
+  print(namesLeng);
+  print(allNames.lastIndexOf('name1'));
+  print(allNames.every((e) => e.length>10));
 
 }
